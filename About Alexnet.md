@@ -20,8 +20,7 @@
 ###
 |LeNet-5 구조|
 | --- |
-|![LeNet-5 구조](https://media.vlpt.us/images/5050/post/b184f9ee-5898-417b-96cc-41d8c2316c9f/image.png)|
-<img src="https://miro.medium.com/max/743/0*N12IeN008JYr-7YC" width="40px" height="5px"></img>
+|![LeNet-5](https://media.vlpt.us/images/5050/post/b184f9ee-5898-417b-96cc-41d8c2316c9f/image.png)|
 ###### LeNet은 손글씨를 인식하는 네트워크로서, 최초 모델인 LeNet-1이 1990년에 제안, 최종적으로 LeNet-5가 1998년에 제안됩니다. 구조를 간단히 살펴보면, 인풋, 3개의 컨볼루션 레이어, 2개의 서브샘플링 레이어, 한 층의 fully-connected 레이어, 아웃풋 레이어로 구성되어 있고, 활성함수로는 tanh함수를 사용합니다. 모델마다 다르긴 하지만, 수십, 수백개의 레이어를 가지고, 주로 RELU 활성함수를 사용하는 최근의 모델들(RESNET 등)과 비교했을때 확실히 간소해 보이긴 합니다. 
 ###
 ###  (2) Alexnet
