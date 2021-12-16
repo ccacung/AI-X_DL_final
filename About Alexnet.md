@@ -15,7 +15,9 @@
 | --- |
 |![MNIST](https://miro.medium.com/max/743/0*N12IeN008JYr-7YC)|
 <img src="https://miro.medium.com/max/743/0*N12IeN008JYr-7YC" width="8" height="5">
+
 ###
+
 #### (1) LeNet
 
 ### 
