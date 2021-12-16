@@ -76,6 +76,13 @@
 | --- |
 |![Relu nonlinearity](https://seongkyun.github.io/assets/post_img/study/2019-05-01-activations/relu_alexplot.jpg)|
 
+### (2-3) Local Response Normalization
+###### Relu 함수는 출력 범위가 0이상이고, 입력 받는 범위는 모든 실수영역이므로 입력값에 대해 정규화가 따로 필요하지 않다는 장점이 있습니다.( 만약 반대라면, 입력값에 음수가 들어가지 않도록 결과값에 대해 적절한 정규화가 필요했을지도 모릅니다.) 하지만, 만약 입력 데이터의 일부 영역의 특징이 너무 강하다면(한 예로, 한 부분의 픽셀 화솟값이 주변 지역에 비해 급격히 크다면), 그 지역에 대한 fillter 가중치가 너무 높게 책정되어 주변 지역을 제대로 인식하는 것이 어려울 수 있습니다. 
+###### 이를 막기위해, Alexnet에서는 Relu 결과값에 local response normalization을 이용합니다. 우리말로 그대로 옮기면 '국소 반응 정규화'입니다. 말 그대로, 모델이 국소 반응에 과도하게 반응하는 것을 막기위해, 동일 지역에 대해 서로 다른 layer 필터를 적용한 값들을 이용해 Relu 결과값을 정규화 하는 것 입니다. 이렇게 하면, 국소 지역의 특징으로 인해 하나의 필터에 과도한 가중치가 매겨졌다 하더라도, 동일 지역의 다른 layer 필터 값들도 큰 값을 가지게 되므로 국소 지역 특징을 과도평가 하는 것을 막는 효과가 있는것입니다. 
+|LRN(local response normalization|
+| --- |
+|![LRN](https://t1.daumcdn.net/cfile/tistory/9925CB3E5A9A560604)|
+
 ## 참고사이트
 https://towardsdatascience.com/a-short-history-of-convolutional-neural-networks-7032e241c483
 
