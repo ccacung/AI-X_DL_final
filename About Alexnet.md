@@ -34,6 +34,7 @@
 | --- |
 |![Imagenet](https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg)|
 <img src="https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg" width="8" height="5">
+###
 ###### CNN모델이 발전하고 있는데, 언제까지 조그마한 손글씨 데이터만 분류하고 있진 않겠죠. 네, MNIST와 유사하게 데이터셋과 상응하는 정답 라벨이 오픈되어 제공되지만, 이제 손글씨 뿐만이 아닌 보다 복잡하고 *자연적인*  이미지 데이터셋을 쌓아놓은 것이 바로 ImageNet 입니다. "가구", "사람"등의 라벨이 붙어진 수많은 데이터가 여기에 해당됩니다. 
 ######  사실, LeNet과 Alexnet 모두 주어진 imagedataset을 어떻게 더 정확하게 분류해 낼 수 있을까에서 발전했다고 볼 수 있을것 같습니다. 이러한 관점에서 보았을 때, 역시 어떤 모델을 쓰는가 보다는 *어떤 데이터를 분류할 것인가에 더욱 더 방점을 두어야 하는것 같습니다. 
  그러면, 이제 본격적으로 논문을 요약, 정리해보겠습니다.
