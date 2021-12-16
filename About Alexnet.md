@@ -1,8 +1,11 @@
 # [Alexnet이란 무엇인가?](https://mmistakes.github.io/minimal-mistakes/)
-### Yeon Wook Park, M.E, zexkiss77@hanyang.ac.kr 
+### Yeon Wook Park, M.E, zexkiss77@hanyang.ac.kr
+
 ## 1. Instruction
-2
-AlexNet은 2012년 개최된 ILSVRC(ImageNet Large Scale Visual Recognition Challenge) 대회의 우승을 차지한 컨볼루션 신경망(CNN) 구조이다.
+###
+- AlexNet은 2012년 개최된 ILSVRC(ImageNet Large Scale Visual Recognition Challenge) 대회의 우승을 차지한 컨볼루션 신경망(CNN) 구조입니다.  
+- Smart Pbl2 수업과 딥러닝 수업에서 실습하고 배운 CNN구조를 더욱 제대로 이해하고 정리하고자 Alexnet을 주제로 포스팅을 했습니다. 
+- Alexnet의 구조와 특징들을 알아보도록 하겠습니다.   
 
 :sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
 
