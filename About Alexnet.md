@@ -16,12 +16,10 @@
 |![MNIST](https://miro.medium.com/max/743/0*N12IeN008JYr-7YC)|
 <img src="https://miro.medium.com/max/743/0*N12IeN008JYr-7YC" width="8" height="5">
 
-###
 
 #### (1) LeNet
 
 ### 
-
 |LeNet-5 구조|
 | --- |
 |![LeNet-5 구조](https://media.vlpt.us/images/5050/post/b184f9ee-5898-417b-96cc-41d8c2316c9f/image.png)|
