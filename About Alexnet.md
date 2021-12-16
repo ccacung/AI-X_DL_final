@@ -36,14 +36,15 @@
 ###### CNN모델이 발전하고 있는데, 언제까지 조그마한 손글씨 데이터만 분류하고 있진 않겠죠. 네, MNIST와 유사하게 데이터셋과 상응하는 정답 라벨이 오픈되어 제공되지만, 이제 손글씨 뿐만이 아닌 보다 복잡하고 *자연적인*  이미지 데이터셋을 쌓아놓은 것이 바로 ImageNet 입니다. "가구", "사람"등의 라벨이 붙어진 수많은 데이터가 여기에 해당됩니다. 
 ######  사실, LeNet과 Alexnet 모두 주어진 imagedataset을 어떻게 더 정확하게 분류해 낼 수 있을까에서 발전했다고 볼 수 있을것 같습니다. 이러한 관점에서 보았을 때, 역시 어떤 모델을 쓰는가 보다는 *어떤 데이터를 분류할 것인가에 더욱 더 방점을 두어야 하는것 같습니다. 
  그러면, 이제 본격적으로 논문을 요약, 정리해보겠습니다.
+##
 ### 3. About Alexnet
 ###
 ###### 먼저, 이 논문은 
-###### abstract 
-###### 1. introduction 
-###### 2. dataset 
-###### 3. architecture 
-###### 4. reducing overfitting
+###### Abstract 
+###### 1. Introduction 
+###### 2. Dataset 
+###### 3. Architecture 
+###### 4. Reducing overfitting
 ###### 5. Details of learning
 ###### 6. Results
 ###### 7. Discussion
@@ -54,17 +55,20 @@
 ###
 ###### Alexnet은 Imagenet 내 120만여개의 고해상도 이미지를 1000개의 라벨로 분류하기 위해 학습된 모델입니다. 학습 결과, test data 상위 5개의 에러가 17~37.5%내에 있는 등 기존 모델보다 훨씬 뛰어난 성능을 보여주게 됩니다. Alexnet은 5개의 convolution layers와 그에 대응하는 max-pooling layers, 3개의 fully-connected layers와 1000개 라벨 다중분류를 위한 softmax 활성함수로 구성되어있습니다. 또한, 이미지 연산에 GPU 사용, dropout regularization 사용등 최근 개발된 대부분의 CNN의 기본이 되는 기법들이 이 모델에 사용됩니다. Alex Krizhevsky(이하 Alex로 편하게 부르겠습니다.)와 그의 동료들은 이 모델을 약간 변형해, 2012년 이미지 인식 경진대회에서 상위 5개 에러 확률 15.3%를 달성해 우승하게됩니다.
 ###
-###### 그 당시 까지만 해도, MNIST 이미지 수준의 간단한 데이터를 수만개 규모로 사용해 학습할 경우, 적절히 augmented된 데이터라면 최고 오류율 0.3% 이내로 인간의 분류 수준에 근접해 있었습니다. 하지만, Imagenet정도 수준의  사실적이고 자연적인 이미지를 적절한 오류율 내에서 분류하기 위해선 훨씬 더 큰 규모(1500만개 규모)의 데이터셋이 필요했고 사실 이것도 충분하진 않았습니다. 
-###### CNN은 이미지의 특성을 잘 반영해 학습한다는 장점에도 불구하고, Imagenet 정도의 규모와 수준의 데이터를 학습하고 처리하기에는 자원이 너무나 많이 소모된다는 단점이 있습니다. 이 문제를 해결하기 위해, Alex는 학습에 GPU를 사용했습니다. 또한, 이미지를 학습하고 처리할 수 있을 만한 네트워크의 폭과 깊이 내에 모델의 성능을 향상, 학습시간 감소를 위해 여러 새롭고 특이한 특징들(a number of new and unusual features), Overfitting 방지를 위해 여러 효과적인 기술(several effective techniques)을 도입합니다. 거칠게 말하면 앞서 말한 layer 개수와 GPU성능 사이에서 정확도와 시간을 최적화, 즉 타협하는데, 여러 기법들을 도입해 그 최적점을 기존보다 훨씬 높은 위치에서 찾았다고 할 수 있습니다. 이번 포스트에서는 **여러 새롭고 특이한 특징들(a number of new and unusual features)**이 무엇이었는지 좀 더 자세히 알아보도록 하겠습니다. 이미지 data는 Imagenet의 데이터를 사용했는데, 앞서 여러번 언급했으니 자세한 설명은 피하고, 다만 Alexnet은 256*256 해상도의 데이터만 input으로 받아들일 수 있기 때문에 다양한 해상도의 imagenet 내 데이터를  down-sampling을 진행해 학습에 이용했다는 것만 알아두시면 될 것 같습니다.
-
-
-
-
-
-
-
-##
-## 참고사이트
-https://towardsdatascience.com/a-short-history-of-convolutional-neural-networks-7032e241c483   
-https://bskyvision.com/418
-https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+###### 그 당시 까지만 해도, MNIST 이미지 수준의 간단한 데이터를 수만개 규모로 사용해 학습할 경우, 적절히 augmented된 데이터라면 최고 오류율 0.3% 이내로 인간의 분류 수준에 근접해 있었습니다. 하지만, Imagenet정도 수준의  사실적이고 자연적인 이미지를 적절한 오류율 내에서 분류하기 위해선 훨씬 더 큰 규모(1500만개 규모)의 데이터셋이 필요했고 사실 이것도 충분하진 않았습니다.
+###
+###### CNN은 이미지의 특성을 잘 반영해 학습한다는 장점에도 불구하고, Imagenet 정도의 규모와 수준의 데이터를 학습하고 처리하기에는 자원이 너무나 많이 소모된다는 단점이 있습니다. 이 문제를 해결하기 위해, Alex는 학습에 GPU를 사용했습니다. 또한, 이미지를 학습하고 처리할 수 있을 만한 네트워크의 폭과 깊이 내에 모델의 성능을 향상, 학습시간 감소를 위해 여러 새롭고 특이한 특징들(a number of new and unusual features), Overfitting 방지를 위해 여러 효과적인 기술(several effective techniques)을 도입합니다. 거칠게 말하면, 앞서 말한 layer 개수와 GPU성능 사이에서 정확도와 시간을 최적화하는데, 여러 기법들을 도입해 그 최적점을 기존보다 훨씬 높은 위치에서 찾았다고 할 수 있습니다. 
+###
+###### 이번 포스트에서는 **여러 새롭고 특이한 특징들(a number of new and unusual features)** 이 무엇이었는지 좀 더 자세히 알아보도록 하겠습니다. 데이터셋은 Imagenet의 데이터를 사용했는데, 앞서 여러번 언급했으니 자세한 설명은 피하고, 다만 Alexnet은 256*256 해상도의 데이터만 input으로 받아들일 수 있기 때문에 다양한 해상도의 imagenet 내 데이터를  down-sampling을 진행해 학습에 이용했다는 것만 알아두시면 될 것 같습니다.
+###
+### (2) Architecture
+###### 다음은 Alexnet의 구조에서  중요한 특징들을 중요도 순으로 설명한 것을 요약한 것입니다.
+###
+### (2-1) Relu Nonlinearity
+###### LesNet에서도 봤듯이, 그동안 convolution layers에서 주로 쓰던 활성함수는 tanh(x) 함수 였습니다. 하지만 이 함수는 경사 하강의 관점에서 보면 Relu 함수에 비해 기울기가 너무 완만해 학습 시간에 악영향을 주었습니다. (Relu 함수는 *f(x)= max(0,x)* 함수로, 입력값이 0이하면 0을, 0 이상에선 입력값 그대로 출력하는 함수 입니다.) 
+###
+###### 실례로, 동일한 모델에서 학습 오류를 줄이는데 필요한 시간이 Relu 함수를 쓸때가 tanh(x)함수를 사용할 때 보다 6배 가량 차이가 났다고 합니다.
+###
+|Relu와 tanh(x) 학습시간 비교|
+| --- |
+|![Relu nonlinearity](https://seongkyun.github.io/assets/post_img/study/2019-05-01-activations/relu_alexplot.jpg)|
