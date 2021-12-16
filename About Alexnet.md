@@ -9,8 +9,8 @@ Yeon Wook Park, M.E, zexkiss77@hanyang.ac.kr
 ##
 ### 2. History of CNN
 ###### 현대적의미의 CNN(convolutional neural network)은 1990년대 MNIST라는 손글씨 숫자 데이터와 시작합니다. 이 데이터셋은 0~9까지의 라벨링된 손글씨 데이터로, CNN은 MNIST의 데이터로 학습 후, 주어진 이미지에 나타난 숫자가 무엇인지 예측하게 되는겁니다. 이 28*28 크기의 작은 데이터를 분류하면서 나온 CNN 모델이 바로 Lenet입니다.
-#
-####  LeNet 
+###
+### LeNet 
 |MNIST 데이터셋|
 | --- |
 |![MNIST](https://miro.medium.com/max/743/0*N12IeN008JYr-7YC)|
