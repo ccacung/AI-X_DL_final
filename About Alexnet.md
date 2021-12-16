@@ -1,6 +1,7 @@
 # [Alexnet이란 무엇인가?](https://mmistakes.github.io/minimal-mistakes/)
 
-Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
+1. Indtroduction
+AlexNet은 2012년 개최된 ILSVRC(ImageNet Large Scale Visual Recognition Challenge) 대회의 우승을 차지한 컨볼루션 신경망(CNN) 구조이다.
 
 :sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
 
