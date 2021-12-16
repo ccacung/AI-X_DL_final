@@ -26,17 +26,14 @@
 ###### LeNet은 손글씨를 인식하는 네트워크로서, 최초 모델인 LeNet-1이 1990년에 제안, 최종적으로 LeNet-5가 1998년에 제안됩니다. 구조를 간단히 살펴보면, 인풋, 3개의 컨볼루션 레이어, 2개의 서브샘플링 레이어, 한 층의 fully-connected 레이어, 아웃풋 레이어로 구성되어 있고, 활성함수로는 tanh함수를 사용합니다. 모델마다 다르긴 하지만, 수십, 수백개의 레이어를 가지고, 주로 RELU 활성함수를 사용하는 최근의 모델들(RESNET 등)과 비교했을때 확실히 간소해 보이긴 합니다. 
 
 ####  (2) Alexnet
-
 ###### 이렇게 1990년대~ 2000년대를 거쳐 CNN은 지속적으로 발전해 오다, 2012년에 열린 이미지 인식 경진대회에서 AlexNet이 우수한 정확도로(오차 15%) 우승하면서 CNN모델들이 큰 인기를 얻게 됩니다. AlexNet에서 Alex는 네트워크 제안자중 한명인 *Alex Krizhevsky*의 이름을 딴 것인데요, 이분이 쓴  **"ImageNet Classification with Deep Convolutional Neural Networks"** 이라는 논문이 바로 오늘 알아볼 논문입니다.
 
 #### (3) Imagenet
-
 ###
 |Imagenet 데이터셋|
 | --- |
 |![Imagenet](https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg)|
 <img src="https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg" width="8" height="5">
-###
 
 ###### CNN모델이 발전하고 있는데, 언제까지 조그마한 손글씨 데이터만 분류하고 있진 않겠죠. 네, MNIST와 유사하게 데이터셋과 상응하는 정답 라벨이 오픈되어 제공되지만, 이제 손글씨 뿐만이 아닌 보다 복잡하고 *자연적인*  이미지 데이터셋을 쌓아놓은 것이 바로 ImageNet 입니다. "가구", "사람"등의 라벨이 붙어진 수많은 데이터가 여기에 해당됩니다. 
 
