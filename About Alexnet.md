@@ -1,6 +1,7 @@
 # [Alexnet이란 무엇인가?](https://mmistakes.github.io/minimal-mistakes/)
 
 1. Indtroduction
+2
 AlexNet은 2012년 개최된 ILSVRC(ImageNet Large Scale Visual Recognition Challenge) 대회의 우승을 차지한 컨볼루션 신경망(CNN) 구조이다.
 
 :sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
