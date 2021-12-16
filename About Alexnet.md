@@ -75,3 +75,9 @@
 |Relu와 tanh(x) 학습시간 비교|
 | --- |
 |![Relu nonlinearity](https://seongkyun.github.io/assets/post_img/study/2019-05-01-activations/relu_alexplot.jpg)|
+
+## 참고사이트
+https://towardsdatascience.com/a-short-history-of-convolutional-neural-networks-7032e241c483   
+https://bskyvision.com/418
+https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+
