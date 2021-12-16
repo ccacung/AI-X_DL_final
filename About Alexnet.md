@@ -12,4 +12,4 @@ Yeon Wook Park, M.E, zexkiss77@hanyang.ac.kr
 |MNIST 데이터셋|
 | --- |
 |![MNIST](https://miro.medium.com/max/743/0*N12IeN008JYr-7YC)|
-<img src="https://miro.medium.com/max/743/0*N12IeN008JYr-7YC" width="16" height="10">
+<img src="https://miro.medium.com/max/743/0*N12IeN008JYr-7YC" width="8" height="5">
