@@ -14,7 +14,6 @@
 |MNIST 데이터셋|
 | --- |
 |![MNIST](https://miro.medium.com/max/743/0*N12IeN008JYr-7YC)|
-<img src="https://miro.medium.com/max/743/0*N12IeN008JYr-7YC" width="8" height="5">
 
 #### (1) LeNet
 ### 
@@ -32,7 +31,7 @@
 |Imagenet 데이터셋|
 | --- |
 |![Imagenet](https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg)|
-<img src="/img/https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg" width="300" height="300">
+
 
 ###### CNN모델이 발전하고 있는데, 언제까지 조그마한 손글씨 데이터만 분류하고 있진 않겠죠. 네, MNIST와 유사하게 데이터셋과 상응하는 정답 라벨이 오픈되어 제공되지만, 이제 손글씨 뿐만이 아닌 보다 복잡하고 *자연적인*  이미지 데이터셋을 쌓아놓은 것이 바로 ImageNet 입니다. "가구", "사람"등의 라벨이 붙어진 수많은 데이터가 여기에 해당됩니다. 
 
