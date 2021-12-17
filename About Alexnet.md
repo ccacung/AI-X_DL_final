@@ -1,6 +1,7 @@
 # [Alexnet이란 무엇인가?](https://mmistakes.github.io/minimal-mistakes/)
 ### 
 ###### Yeon Wook Park, M.E, zexkiss77@hanyang.ac.kr
+###### https://youtu.be/ZbWZ3wrkz18
 ##
 ### 1. Instruction
 ###### - AlexNet은 2012년 개최된 ILSVRC 대회의 우승을 차지한 컨볼루션 신경망(CNN) 구조입니다.  
